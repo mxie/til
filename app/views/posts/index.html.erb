@@ -1,0 +1,10 @@
+<%= simple_form_for @post do |f| %>
+  <%= f.input :lesson %>
+  <%= f.button :submit %>
+<% end %>
+
+<ul>
+<% @posts.each do |post| %>
+  <li><%= post.lesson %></li>
+<% end %>
+</ul>
