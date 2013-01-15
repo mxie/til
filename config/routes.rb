@@ -1,4 +1,6 @@
 Til::Application.routes.draw do
-  root :to => 'Clearance::Sessions#new'
+  root :to => 'posts#index'
+
+  resources :posts
 
 end
