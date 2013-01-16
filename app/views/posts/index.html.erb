@@ -14,37 +14,34 @@
   <header>
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
-      <div class="container">
-        <a class="brand" href="#">Today I Learned</a>
-        <ul class="nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">People</a></li>
-          <li><a href="#">Tags</a></li>
-        </ul>
-        <ul class="nav pull-right">
-          <li>
-            <a href="#" data-toggle="dropdown">Login</a>
+        <div class="container">
+          <a class="brand" href="#">Today I Learned</a>
+          <ul class="nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">People</a></li>
+            <li><a href="#">Tags</a></li>
+          </ul>
+          <ul class="nav pull-right">
+            <li>
+              <a href="#" data-toggle="dropdown">Login</a>
               <ul class="dropdown-menu" id="test" role="menu" aria-labelledby="dropdownMenu">
                 <li>
-                  <label for="">email</label>
-                  <input type="">
-                  <label for="">password</label>
-                  <input type="">
-                  <button class="btn">Login</button>
+                  <div class="login">
+                    <% if signed_in? -%>
+                      <%= link_to "Sign out", sign_out_path, :method => :delete %>
+                    <% else -%>
+                      <%= link_to "Sign in", sign_in_path %>
+                    <% end -%>
+                  </div>
                 </li>
               </ul>
-          </li>
-        </ul>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
-    <div class="login">
-      <% if signed_in? -%>
-        <%= link_to "Sign out", sign_out_path, :method => :delete %>
-      <% else -%>
-        <%= link_to "Sign in", sign_in_path %>
-      <% end -%>
-    </div>
+
+
   </header>
 
   <%= render 'flashes' -%>
