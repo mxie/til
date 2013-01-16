@@ -1,0 +1,34 @@
+<div class="m-my-area">
+  <div class="container">
+  </div>
+</div>
+
+<div class="tab-section">
+  <div class="container">
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#">My Subscriptions</a></li>
+      <li><a href="#">My Followers</a></li>
+      <li><a href="#">Everyone</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="container">
+  <section>
+    <ul>
+      <%= render @users %>
+    </ul>
+  </section>
+
+  <aside>
+    <div class="m-tags">
+      <h3>Popular Tags</h3>
+        <div class="badge">This is a tag</div>
+        <div class="badge">This is other tag</div>
+        <div class="badge">Tag</div>
+        <div class="badge">This is another tag</div>
+        <div class="badge">This is a tag</div>
+        <div class="badge">This is another tag</div>
+    </div>
+  </aside>
+</div>
