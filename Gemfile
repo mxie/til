@@ -12,6 +12,7 @@ gem 'paperclip'
 gem 'simple_form'
 gem 'flutie'
 gem 'bourbon'
+gem 'neat'
 gem 'airbrake'
 
 group :development do
