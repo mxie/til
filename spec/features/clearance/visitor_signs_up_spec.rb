@@ -18,4 +18,14 @@ feature 'Visitor signs up' do
 
     user_should_be_signed_out
   end
+
+  scenario 'and sees a different landing page' do
+    visit root_path
+
+    page.should_not have_content('Today I Learned:')
+
+    sign_up_with 'user@example.com', 'foobar'
+
+    page.should have_content('Today I Learned:')
+  end
 end

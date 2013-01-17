@@ -1,6 +1,6 @@
 Til::Application.routes.draw do
-  root :to => 'posts#index'
+  root :to => 'homes#index'
 
   resources :posts
-
+  resource :session, controller: 'sessions'
 end
