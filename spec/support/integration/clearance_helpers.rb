@@ -1,7 +1,9 @@
 module Integration
   module ClearanceHelpers
     def sign_up_with(email, password)
-      visit sign_up_path
+      visit root_path
+      click_link I18n.t('sessions.new.sign_up')
+
       fill_in 'user_email', :with => email
       fill_in 'user_password', :with => password
       click_button I18n.t('helpers.submit.user.create')
