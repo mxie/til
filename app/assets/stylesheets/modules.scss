@@ -1,0 +1,43 @@
+// m- stands for module
+
+
+.login {
+  display: hidden;
+}
+
+.m-input {
+  .btn {
+    width: 100%;
+  }
+  margin-bottom: $module-margin;
+}
+
+.m-tags {
+  margin-bottom: $module-margin;
+}
+
+.m-stats {
+}
+
+.avatar {
+  height: 50px;
+  width: 50px;
+  background-color: whiteSmoke;
+  float: left;
+  margin-right: $baseLineHeight / 2;
+}
+
+.learning {
+  height: 100%;
+  margin-bottom: $module-margin;
+}
+
+.learning-content {
+  margin-left: $baseLineHeight *3;
+}
+
+.m-my-area {
+  width: 100%;
+  background-color: silver;
+  padding: $module-margin *3 0;
+}

@@ -1,0 +1,23 @@
+<header>
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="brand" href="#">Today I Learned</a>
+        <ul class="nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">People</a></li>
+          <li><a href="#">Tags</a></li>
+        </ul>
+        <ul class="nav pull-right">
+          <li>
+            <% if signed_in? -%>
+              <%= link_to "Sign out", sign_out_path, :method => :delete %>
+            <% else -%>
+              <%= link_to "Sign in", sign_in_path %>
+            <% end -%>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>

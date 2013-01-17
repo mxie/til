@@ -1,0 +1,39 @@
+//
+// Layouts
+// --------------------------------------------------
+
+
+// Container (centered, fixed-width layouts)
+.container {
+  @include container-fixed();
+  @include outer-container;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+// Fluid layouts (left aligned, with sidebar, min- & max-width content)
+.container-fluid {
+  padding-right: $gridGutterWidth;
+  padding-left: $gridGutterWidth;
+  @include clearfix();
+}
+
+aside {
+  @include span-columns(4);
+  @include omega();
+}
+
+section {
+  @include span-columns(8);
+}
+
+.l-text-learning {
+  @include span-columns(8);
+}
+
+.l-landing-stats {
+  @include span-columns(4);
+  @include omega();
+}
