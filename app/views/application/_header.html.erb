@@ -10,18 +10,11 @@
         </ul>
         <ul class="nav pull-right">
           <li>
-            <a href="#" data-toggle="dropdown">Login</a>
-            <ul class="dropdown-menu" id="test" role="menu" aria-labelledby="dropdownMenu">
-              <li>
-                <div class="login">
-                  <% if signed_in? -%>
-                    <%= link_to "Sign out", sign_out_path, :method => :delete %>
-                  <% else -%>
-                    <%= link_to "Sign in", sign_in_path %>
-                  <% end -%>
-                </div>
-              </li>
-            </ul>
+            <% if signed_in? -%>
+              <%= link_to "Sign out", sign_out_path, :method => :delete %>
+            <% else -%>
+              <%= link_to "Sign in", sign_in_path %>
+            <% end -%>
           </li>
         </ul>
       </div>
