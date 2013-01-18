@@ -1,34 +1,46 @@
 <div class="m-my-area">
   <div class="container">
-    <div class="l-text-learning">
+    <div class="l-input">
       <div class="m-input">
-        <h3>Today I Learned:</h3>
         <%= simple_form_for @post do |f| %>
-          <%= f.input :lesson %>
-          <%= f.input :tag_list %>
-          <%= f.button :submit %>
+          <%= f.input :lesson, :as => :text, :input_html => { :rows => 2 } %>
+      </div>
+    </div>
+    <div class="l-input-tags">
+      <div class="m-input-tags">
+        <%= f.input :tag_list, :as => :text, :input_html => { :rows => 2 } %>
+      </div>
+    </div>
+    <div class="l-input-button">
+      <div class="m-input-button">
+        <%= f.button :submit, :class => "btn" %>
         <% end %>
       </div>
     </div>
     <div class="l-landing-stats">
+    <label for="">Statistics</label>
       <div class="m-stats">
-        <h3>Stats</h3>
-        <div class="well"></div>
+
       </div>
     </div>
   </div>
 </div>
 
+<div class="tab-section">
+<div class="container">
+  <ul class="nav nav-tabs">
+    <li class="active">
+      <a href="#">Friend's Learnings</a>
+    </li>
+    <li><a href="#">My Learnings</a></li>
+  </ul>
+</div>
+</div>
+
+
 <div class="container">
   <section>
-    <h3>Learnings</h3>
-    <ul class="nav nav-tabs">
-      <li class="active">
-        <a href="#">Friend's Learnings</a>
-      </li>
-      <li><a href="#">My Learnings</a></li>
-    </ul>
-    <ul>
+
       <% @posts.each do |post| %>
         <li>
           <div class="learning">
@@ -58,6 +70,7 @@
         <div class="badge">This is another tag</div>
     </div>
   </aside>
+  </div>
 
 <!--
   <ul class="nav nav-tabs">

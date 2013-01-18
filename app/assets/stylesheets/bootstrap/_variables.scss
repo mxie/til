@@ -9,20 +9,21 @@
 
 // Grays
 // -------------------------
-$black:                 #000 !default;
+
 $grayDarker:            #222 !default;
 $grayDark:              #333 !default;
 $gray:                  #555 !default;
 $grayLight:             #BBB !default;
-$grayLighter:           #eee !default;
-$white:                 #fff !default;
 
+$white:                 #FAFAF7;
+$grayLighter:           darken($white, 10%);
 
 // Accent colors
 // -------------------------
-$blue:                  #049cdb !default;
+$blue:                  #91C3CA !default;
 $blueDark:              #0064cd !default;
 $green:                 #46a546 !default;
+$black:                 darken($green, 34%);
 $red:                   #9d261d !default;
 $yellow:                #ffc40d !default;
 $orange:                #f89406 !default;
@@ -44,8 +45,9 @@ $linkColorHover:        darken($linkColor, 15%) !default;
 
 // Typography
 // -------------------------
-$sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$serifFontFamily:       Georgia, "Times New Roman", Times, serif !default;
+
+$sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serifFontFamily:       "ff-ernestine-web-pro", "Times New Roman", Times, serif !default;
 $monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace !default;
 
 $baseFontSize:          14px !default;
@@ -53,8 +55,8 @@ $baseFontFamily:        $sansFontFamily !default;
 $baseLineHeight:        20px !default;
 $altFontFamily:         $serifFontFamily !default;
 
-$headingsFontFamily:    inherit !default; // empty to use BS default, $baseFontFamily
-$headingsFontWeight:    bold !default;    // instead of browser default, bold
+$headingsFontFamily:    "ff-ernestine-web-pro", sans-serif; // empty to use BS default, $baseFontFamily
+$headingsFontWeight:    300 !default;    // instead of browser default, bold
 $headingsColor:         inherit !default; // empty to use BS default, $textColor
 
 
@@ -187,7 +189,7 @@ $wellBackground:                  #f5f5f5 !default;
 $navbarCollapseWidth:             979px !default;
 $navbarCollapseDesktopWidth:      $navbarCollapseWidth + 1;
 
-$navbarHeight:                    40px !default;
+$navbarHeight:                    $baseFontSize *5;
 $navbarBackgroundHighlight:       #ffffff !default;
 $navbarBackground:                darken($navbarBackgroundHighlight, 5%) !default;
 $navbarBorder:                    darken($navbarBackground, 12%) !default;
@@ -195,7 +197,7 @@ $navbarBorder:                    darken($navbarBackground, 12%) !default;
 $navbarText:                      #777 !default;
 $navbarLinkColor:                 #777 !default;
 $navbarLinkColorHover:            $grayDark !default;
-$navbarLinkColorActive:           $gray !default;
+$navbarLinkColorActive:           $green !default;
 $navbarLinkBackgroundHover:       transparent !default;
 $navbarLinkBackgroundActive:      darken($navbarBackground, 5%) !default;
 
