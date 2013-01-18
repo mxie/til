@@ -22,10 +22,10 @@ feature 'Visitor signs up' do
   scenario 'and sees a different landing page' do
     visit root_path
 
-    page.should_not have_content('Today I Learned:')
+    page.should_not have_content('Lesson')
 
     sign_up_with 'user@example.com', 'foobar'
 
-    page.should have_content('Today I Learned:')
+    page.should have_content('Lesson')
   end
 end

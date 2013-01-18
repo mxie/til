@@ -1,76 +1,44 @@
 <div class="m-my-area">
   <div class="container">
-    <div class="l-input">
-      <div class="m-input">
-        <%= simple_form_for @post do |f| %>
-          <%= f.input :lesson, :as => :text, :input_html => { :rows => 2 } %>
-      </div>
-    </div>
-    <div class="l-input-tags">
-      <div class="m-input-tags">
-        <%= f.input :tag_list, :as => :text, :input_html => { :rows => 2 } %>
-      </div>
-    </div>
-    <div class="l-input-button">
-      <div class="m-input-button">
-        <%= f.button :submit, :class => "btn" %>
-        <% end %>
-      </div>
-    </div>
+    <%= render 'form' %>
     <div class="l-landing-stats">
-    <label for="">Statistics</label>
+      <label for="">Statistics</label>
       <div class="m-stats">
-
       </div>
     </div>
   </div>
 </div>
 
 <div class="tab-section">
-<div class="container">
-  <ul class="nav nav-tabs">
-    <li class="active">
-      <a href="#">Friend's Learnings</a>
-    </li>
-    <li><a href="#">My Learnings</a></li>
-  </ul>
-</div>
+  <div class="container">
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#">My Learnings</a></li>
+      <li><a href="#">Friend's Learnings</a></li>
+      <li><a href="#">Everyone's Learnings</a></li>
+    </ul>
+  </div>
 </div>
 
 
 <div class="container">
   <section>
-
-      <% @posts.each do |post| %>
-        <li>
-          <div class="learning">
-            <div class="avatar"></div>
-            <div class="learning-content">
-              <h4 class="inline">Person's Name</h4>
-              <h6 class="inline"><%= time_ago_in_words(post.created_at) %> ago</h5>
-              <p><%= post.lesson %></p>
-              <% post.tags.each do |tag| %>
-                <div class="badge"><%= tag %></div>
-              <% end %>
-            </div>
-          </div>
-        </li>
-      <% end %>
+    <ul>
+      <%= render @posts %>
     </ul>
   </section>
 
   <aside>
     <div class="m-tags">
       <h3>Popular Tags</h3>
-        <div class="badge">This is a tag</div>
-        <div class="badge">This is other tag</div>
-        <div class="badge">Tag</div>
-        <div class="badge">This is another tag</div>
-        <div class="badge">This is a tag</div>
-        <div class="badge">This is another tag</div>
+      <div class="badge">This is a tag</div>
+      <div class="badge">This is other tag</div>
+      <div class="badge">Tag</div>
+      <div class="badge">This is another tag</div>
+      <div class="badge">This is a tag</div>
+      <div class="badge">This is another tag</div>
     </div>
   </aside>
-  </div>
+</div>
 
 <!--
   <ul class="nav nav-tabs">
@@ -136,4 +104,3 @@
 
   </table>
 -->
-</div> <!-- container -->
