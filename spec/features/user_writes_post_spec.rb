@@ -31,4 +31,23 @@ feature 'User writes post' do
     page.should have_content('vague')
     page.should have_content('random')
   end
+
+  scenario 'and sees how much time has passed since they wrote the post' do
+    old_time = Time.parse('12:00')
+    new_time = Time.parse('12:02')
+
+    Timecop.freeze(old_time)
+
+    fill_in 'Lesson', with: 'Cool things'
+    click_button 'Create Post'
+
+    Timecop.return
+    Timecop.travel(new_time)
+
+    visit root_path
+
+    page.should have_content('Cool things')
+    page.should_not have_content('tags:')
+    page.should have_content('2 minutes ago')
+  end
 end

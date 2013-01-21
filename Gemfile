@@ -14,7 +14,7 @@ gem 'flutie'
 gem 'bourbon'
 gem 'neat'
 gem 'airbrake'
-gem 'acts-as-taggable-on', '~> 2.3.1'
+gem 'acts-as-taggable-on', '~> 2.3.3'
 
 group :development do
   gem 'foreman'
