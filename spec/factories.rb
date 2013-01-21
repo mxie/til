@@ -9,6 +9,8 @@ FactoryGirl.define do
     password "password"
   end
 
-  factory :post
+  factory :post do
+    lesson 'A lesson'
+  end
 
 end

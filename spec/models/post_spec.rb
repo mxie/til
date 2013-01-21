@@ -1,6 +1,9 @@
 require 'spec_helper'
 
 describe Post do
+
+  it { should validate_presence_of(:lesson) }
+
   context 'with acts_as_ordered_taggable functionality' do
     describe '#tags' do
       it 'returns a list of tags for a post' do

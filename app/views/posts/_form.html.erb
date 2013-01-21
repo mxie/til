@@ -1,7 +1,7 @@
-<%= simple_form_for @post do |f| %>
+<%= simple_form_for @post, defaults: { label: false, as: :text } do |f| %>
   <div class="l-input">
-      <%= f.input :lesson, as: :text, input_html: { rows: 2 }, placeholder: 'Lesson', label: false %>
-      <%= f.input :tag_list, as: :text, input_html: { rows: 1 }, placeholder: 'Tags', label: false  %>
+    <%= f.input :lesson, input_html: { rows: 2 }, placeholder: 'Lesson' %>
+    <%= f.input :tag_list, input_html: { rows: 1 }, placeholder: 'Tags'  %>
   </div>
 
   <div class="l-input-button">

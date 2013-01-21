@@ -5,6 +5,19 @@ feature 'User writes post' do
     signed_in_user
   end
 
+  scenario 'with invalid input' do
+    click_button 'Create Post'
+
+    page.should have_css('.error')
+  end
+
+  scenario 'with valid input' do
+    fill_in 'Lesson', with: 'A lesson'
+    click_button 'Create Post'
+
+    page.should_not have_css('.error')
+  end
+
   scenario 'and sees the post they just wrote' do
     fill_in 'Lesson', with: 'Cool things'
     click_button 'Create Post'
