@@ -3,6 +3,10 @@
 // --------------------------------------------------
 
 
+body {
+  background-color: $white;
+}
+
 // Container (centered, fixed-width layouts)
 .container {
   @include container-fixed();
@@ -29,11 +33,19 @@ section {
   @include span-columns(8);
 }
 
-.l-text-learning {
+.l-input {
   @include span-columns(8);
 }
 
-.l-landing-stats {
+.l-input-tags {
   @include span-columns(4);
   @include omega();
+}
+
+.l-input-button {
+  @include span-columns(12);
+}
+
+.l-landing-stats {
+  @include span-columns(12);
 }
