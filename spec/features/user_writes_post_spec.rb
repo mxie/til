@@ -46,8 +46,6 @@ feature 'User writes post' do
 
     visit root_path
 
-    page.should have_content('Cool things')
-    page.should_not have_content('tags:')
     page.should have_content('2 minutes ago')
   end
 end
