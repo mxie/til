@@ -1,0 +1,14 @@
+<div class="m-my-area">
+  <div class="container">
+    <h2><%= t '.title' %></h2>
+
+    <p><%= t '.description' %></p>
+
+    <%= simple_form_for :password_reset,
+      url: user_password_path(@user, token: @user.confirmation_token),
+      method: :put do |form| %>
+      <%= form.input :password %>
+      <%= form.button :submit %>
+    <% end %>
+  </div>
+</div>
