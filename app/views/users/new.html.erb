@@ -1,0 +1,10 @@
+<div class="m-my-area">
+  <div class="container">
+    <h2>Sign up</h2>
+
+    <%= form_for @user do |form| %>
+      <%= render partial: '/users/form', object: form %>
+      <%= form.submit %>
+    <% end %>
+  </div>
+</div>
