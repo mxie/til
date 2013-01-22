@@ -6,7 +6,7 @@
       <h6 class="inline"><%= time_ago_in_words(post.created_at) %> ago</h6>
       <p><%= post.lesson %></p>
       <% post.tags.each do |tag| %>
-        <div class="badge"><%= tag %></div>
+        <a class="badge"><%= tag %></a>
       <% end %>
     </div>
   </div>

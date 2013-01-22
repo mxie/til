@@ -1,14 +1,13 @@
 <%= simple_form_for @post do |f| %>
   <div class="l-input">
     <div class="m-input">
-      <%= f.input :lesson, as: :text, input_html: { rows: 2 } %>
+      <%= f.input :lesson, as: :text, input_html: { rows: 2 }, :placeholder => 'Lesson', :label => false %>
     </div>
-  </div>
-  <div class="l-input-tags">
     <div class="m-input-tags">
-      <%= f.input :tag_list, as: :text, input_html: { rows: 2 }, label: :tags %>
+      <%= f.input :tag_list, as: :text, input_html: { rows: 1 }, :placeholder => 'Tag List', :label => false  %>
     </div>
   </div>
+
   <div class="l-input-button">
     <div class="m-input-button">
       <%= f.button :submit, class: 'btn' %>

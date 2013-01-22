@@ -18,7 +18,6 @@
   vertical-align: middle;
   cursor: pointer;
   @include ie7-restore-left-whitespace(); // Give IE7 some love
-
   color: darken($white, 10%);
   background-color: darken($green, 12%);
   border: 0;
@@ -26,7 +25,7 @@
   @include transition (all 0.4s ease-in-out);
   margin-bottom: $baseLineHeight;
   border-radius: $baseBorderRadius;
-  border-bottom: 2px solid red;               //Why does this turn green?
+  border-bottom: 2px solid $green;
 
   // Hover state
   &:hover {
@@ -51,6 +50,7 @@
     background-image: none;
     outline: 0;
     @include box-shadow(inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05));
+    border-bottom: 2px solid $green;
   }
 
   // Disabled state

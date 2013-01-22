@@ -14,21 +14,60 @@
 </div>
 
 <div class="container">
-  <section>
-    <ul>
-      <%= render @users %>
-    </ul>
-  </section>
 
-  <aside>
-    <div class="m-tags">
-      <h3>Popular Tags</h3>
-        <div class="badge">This is a tag</div>
-        <div class="badge">This is other tag</div>
-        <div class="badge">Tag</div>
-        <div class="badge">This is another tag</div>
-        <div class="badge">This is a tag</div>
-        <div class="badge">This is another tag</div>
-    </div>
-  </aside>
+    <table class="table table-striped">
+      <tr>
+        <th>Name</th>
+        <th>Popular Learnings</th>
+        <th>Subscription</th>
+      </tr>
+      <tr>
+        <td><%= render @users %><td>
+        <td>
+          <a class="badge">This is a tag</a>
+          <a class="badge">Tag</a>
+          <a class="badge">Tis a tag</a>
+        </td>
+        <td>
+          <button class="btn-mini">Unsubscribe</button>
+        </td>
+      </tr>
+
+
+    </table>
+
+       <ul>
+
+      </ul>
 </div>
+
+
+
+
+
+<!--
+
+  <ul class="nav nav-tabs">
+    <li class="active">
+      <a href="#">My Tags</a>
+    </li>
+    <li><a href="#">My Follower's Tags</a></li>
+    <li><a href="#">All Tags</a></li>
+  </ul>
+
+  <table class="table table-striped">
+    <tr>
+      <th><p>Name</p></th>
+      <th><p>Number of occurances</p></th>
+      <th><p>Subscription</p></th>
+    </tr>
+    <tr>
+      <td><div class="badge">Apes</div></td>
+      <td><p>234</p></td>
+      <td>
+        <button class="btn-mini">Unsubscribe</button>
+      </td>
+    </tr>
+
+  </table>
+ -->
