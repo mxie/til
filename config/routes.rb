@@ -3,4 +3,5 @@ Til::Application.routes.draw do
 
   resources :posts
   resource :session, controller: 'sessions'
+  resources :users, controller: 'users'
 end

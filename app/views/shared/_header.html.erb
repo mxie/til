@@ -4,14 +4,14 @@
       <div class="container">
         <%= link_to 'Today I Learned', root_path, class: 'brand' %>
         <ul class="nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">People</a></li>
+          <li class="active"><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'People', users_path %></li>
           <li><a href="#">Tags</a></li>
         </ul>
         <ul class="nav pull-right">
           <li>
             <% if signed_in? -%>
-              <%= link_to "Sign out", sign_out_path, :method => :delete %>
+              <%= link_to "Sign out", sign_out_path, method: :delete %>
             <% else -%>
               <%= link_to "Sign in", sign_in_path %>
             <% end -%>

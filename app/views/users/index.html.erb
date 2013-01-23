@@ -1,0 +1,52 @@
+<div class="m-my-area">
+  <div class="container">
+  </div>
+</div>
+
+<div class="tab-section">
+  <div class="container">
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#">My Subscriptions</a></li>
+      <li><a href="#">My Followers</a></li>
+      <li><a href="#">Everyone</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="container">
+    <table class="table table-striped">
+      <tr>
+        <th>Name</th>
+        <th>Popular Learnings</th>
+        <th>Subscription</th>
+      </tr>
+      <%= render @users %>
+    </table>
+</div>
+
+
+<!--
+  <ul class="nav nav-tabs">
+    <li class="active">
+      <a href="#">My Tags</a>
+    </li>
+    <li><a href="#">My Follower's Tags</a></li>
+    <li><a href="#">All Tags</a></li>
+  </ul>
+
+  <table class="table table-striped">
+    <tr>
+      <th><p>Name</p></th>
+      <th><p>Number of occurances</p></th>
+      <th><p>Subscription</p></th>
+    </tr>
+    <tr>
+      <td><div class="badge">Apes</div></td>
+      <td><p>234</p></td>
+      <td>
+        <button class="btn-mini">Unsubscribe</button>
+      </td>
+    </tr>
+
+  </table>
+ -->
