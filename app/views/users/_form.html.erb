@@ -1,4 +1,6 @@
-<%= form.input :name, placeholder: 'Name', label: false %>
-<%= form.input :email, placeholder: "Email", label: false %>
-<%= form.input :password, placeholder: 'Password', label: false %>
-
+<%= simple_form_for @user, defaults: { label: false } do |form| %>
+  <%= form.input :name, placeholder: 'Name' %>
+  <%= form.input :email, placeholder: "Email" %>
+  <%= form.input :password, placeholder: 'Password' %>
+  <%= form.button :submit, class: 'btn' %>
+<% end %>
