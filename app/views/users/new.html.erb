@@ -3,16 +3,13 @@
     <section>
       <div class="welcome">Today I learned!</div>
     </section>
-    <aside>
-    <h2>Sign up</h2>
 
-    <%= simple_form_for @user do |form| %>
-      <%= render partial: 'users/form', object: form %>
-      <%= form.button :submit, class: 'btn' %>
-    <% end %>
+    <aside>
+      <h2>Sign up</h2>
+      <%= render 'users/form' %>
+      <ul>
+        <li><%= link_to t('sessions.new.title'), sign_in_path %></li>
+      </ul>
     </aside>
   </div>
 </div>
-
-
-

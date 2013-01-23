@@ -23,7 +23,7 @@ feature 'Visitor updates password' do
     change_password_to ''
 
     page.should have_content I18n.t('flashes.failure_after_update')
-    user_should_be_signed_out
+    page.should have_content I18n.t('passwords.edit.title')
   end
 
   private
