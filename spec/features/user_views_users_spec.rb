@@ -8,7 +8,7 @@ feature 'User views users page' do
     click_link 'People'
 
     User.all.each do |user|
-      page.should have_selector('li', text: user.display_name)
+      page.should have_selector('td', text: user.display_name)
     end
   end
 

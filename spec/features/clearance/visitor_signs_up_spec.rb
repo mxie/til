@@ -22,10 +22,10 @@ feature 'Visitor signs up' do
   scenario 'and sees a different landing page' do
     visit root_path
 
-    page.should_not have_content('Lesson')
+    page.should_not have_xpath('//textarea[@placeholder="Lesson"]')
 
     sign_up_with '', 'user@example.com', 'foobar'
 
-    page.should have_content('Lesson')
+    page.should have_xpath('//textarea[@placeholder="Lesson"]')
   end
 end

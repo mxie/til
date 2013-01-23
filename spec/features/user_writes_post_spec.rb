@@ -15,7 +15,7 @@ feature 'User writes post' do
 
   scenario 'and sees the post they just wrote with a tag' do
     fill_in 'Lesson', with: 'Cool things'
-    fill_in 'tags', with: 'vague'
+    fill_in 'Tags', with: 'vague'
     click_button 'Create Post'
 
     page.should have_content('Cool things')
@@ -24,7 +24,7 @@ feature 'User writes post' do
 
   scenario 'and sees the post they just wrote with multiple tags' do
     fill_in 'Lesson', with: 'Cool things'
-    fill_in 'tags', with: 'vague, random'
+    fill_in 'Tags', with: 'vague, random'
     click_button 'Create Post'
 
     page.should have_content('Cool things')
