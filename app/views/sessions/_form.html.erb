@@ -1,5 +1,6 @@
 <%= simple_form_for :session, :url => session_path do |form| %>
-  <%= form.input :email %>
-  <%= form.input :password %>
-  <%= form.button :submit %>
+  <%= form.input :email, input_html: { rows: 1 }, placeholder: 'Email', label: false  %>
+  <%= form.input :password, input_html: { rows: 1 }, placeholder: 'Password', label: false  %>
+  <%= form.button :submit, class: 'btn' %>
 <% end %>
+

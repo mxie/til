@@ -16,11 +16,19 @@
   white-space: nowrap;
   // text-shadow: 0 -1px 0 rgba(0,0,0,.25);
   background-color: $blue;
-  border-bottom: 1px solid darken($blue, 8%);
+  border-bottom: 2px solid darken($blue, 8%);
   border-radius: $baseBorderRadius;
   @include transition (all 0.1s ease-in-out);
   &:hover {
     background-color: darken(saturate($blue, 10%), 10%);
+    border-bottom: 2px solid darken($blue, 15%);
+  }
+  &.warning {
+    background-color: $orange;
+    border-bottom: 2px solid darken($orange, 10%);
+    &:hover {
+      background-color: lighten(saturate($orange, 10%), 10%);
+    }
   }
 }
 // Set unique padding and border-radii

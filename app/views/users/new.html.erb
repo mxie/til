@@ -1,10 +1,18 @@
 <div class="m-my-area">
   <div class="container">
+    <section>
+      <div class="welcome">Today I learned!</div>
+    </section>
+    <aside>
     <h2>Sign up</h2>
 
     <%= simple_form_for @user do |form| %>
       <%= render partial: 'users/form', object: form %>
-      <%= form.button :submit %>
+      <%= form.button :submit, class: 'btn' %>
     <% end %>
+    </aside>
   </div>
 </div>
+
+
+

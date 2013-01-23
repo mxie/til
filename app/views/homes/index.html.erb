@@ -1,6 +1,16 @@
 <div class="m-my-area">
   <div class="container">
-    <h1>Welcome!</h1>
-    <%= link_to I18n.t('sessions.new.sign_up'), sign_up_path %>
+
+    <section>
+      <div class="welcome">Today I learned!</div>
+    </section>
+    <aside>
+    <h2>Sign in</h2>
+    <%= render 'sessions/form' %>
+      <ul>
+        <li><%= link_to t('.forgot_password'), new_password_path %></li>
+        <li><%= link_to t('.sign_up'), sign_up_path %></li>
+      </ul>
+    </aside>
   </div>
 </div>

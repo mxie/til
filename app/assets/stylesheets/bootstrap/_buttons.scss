@@ -100,6 +100,7 @@
   padding: $paddingMini;
   font-size: $fontSizeMini;
   @include border-radius($borderRadiusSmall);
+  border: none;
 }
 
 
@@ -155,7 +156,8 @@ input[type="button"] {
 }
 // Warning appears are orange
 .btn-warning {
-  @include buttonBackground($btnWarningBackground, $btnWarningBackgroundHighlight);
+  background-color: $orange;
+  border-bottom: 1px solid darken($orange, 10%);
 }
 // Danger and error appear as red
 .btn-danger {

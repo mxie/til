@@ -195,8 +195,8 @@ $navbarBackground:                darken($navbarBackgroundHighlight, 5%) !defaul
 $navbarBorder:                    darken($navbarBackground, 12%) !default;
 
 $navbarText:                      #777 !default;
-$navbarLinkColor:                 #777 !default;
-$navbarLinkColorHover:            $grayDark !default;
+$navbarLinkColor:                 #C4C4C4 !default;
+$navbarLinkColorHover:            $white !default;
 $navbarLinkColorActive:           $green !default;
 $navbarLinkBackgroundHover:       transparent !default;
 $navbarLinkBackgroundActive:      darken($navbarBackground, 5%) !default;

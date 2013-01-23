@@ -21,6 +21,15 @@ a {
   text-decoration: none;
 }
 
+.welcome {
+  font-family: "flood-std",sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 110px;
+  color: lighten($green, 18%);
+  margin-bottom: 22px;
+}
+
 // Emphasis & misc
 // -------------------------
 

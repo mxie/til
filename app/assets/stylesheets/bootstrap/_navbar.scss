@@ -53,31 +53,31 @@
   text-decoration: none;
 }
 
-// Plain text in topbar
-// -------------------------
-.navbar-text {
-  margin-bottom: 0;
-  line-height: $navbarHeight;
-  color: $navbarText;
-}
+// // Plain text in topbar
+// // -------------------------
+// .navbar-text {
+//   margin-bottom: 0;
+//   line-height: $navbarHeight;
+//   color: $navbarText;
+// }
 
 // Janky solution for now to account for links outside the .nav
 // -------------------------
-.navbar-link {
-  color: $navbarLinkColor;
-  &:hover {
-    color: $navbarLinkColorHover;
-  }
-}
+// .navbar-link {
+//   color: $navbarLinkColor;
+//   &:hover {
+//     color: $navbarLinkColorHover;
+//   }
+// }
 
 // Dividers in navbar
-// -------------------------
-.navbar .divider-vertical {
-  height: $navbarHeight;
-  margin: 0 9px;
-  border-left: 1px solid $navbarBackground;
-  border-right: 1px solid $navbarBackgroundHighlight;
-}
+// // -------------------------
+// .navbar .divider-vertical {
+//   height: $navbarHeight;
+//   margin: 0 9px;
+//   border-left: 1px solid $navbarBackground;
+//   border-right: 1px solid $navbarBackgroundHighlight;
+// }
 
 // Buttons in navbar
 // -------------------------
@@ -123,20 +123,20 @@
   }
 }
 
-// Navbar search
-// -------------------------
-.navbar-search {
-  position: relative;
-  float: left;
-  @include navbarVerticalAlign(30px); // Vertically center in navbar
-  margin-bottom: 0;
-  .search-query {
-    margin-bottom: 0;
-    padding: 4px 14px;
-    @include font-sans-serif(13px, normal, 1);
-    @include border-radius(15px); // redeclare because of specificity of the type attribute
-  }
-}
+// // Navbar search
+// // -------------------------
+// .navbar-search {
+//   position: relative;
+//   float: left;
+//   @include navbarVerticalAlign(30px); // Vertically center in navbar
+//   margin-bottom: 0;
+//   .search-query {
+//     margin-bottom: 0;
+//     padding: 4px 14px;
+//     @include font-sans-serif(13px, normal, 1);
+//     @include border-radius(15px); // redeclare because of specificity of the type attribute
+//   }
+// }
 
 
 

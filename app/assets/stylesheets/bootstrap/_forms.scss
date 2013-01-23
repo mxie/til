@@ -8,7 +8,7 @@
 
 // Make all forms have space below them
 form {
-  margin: 0 0 $baseLineHeight;
+  margin: 0;
 }
 
 fieldset {
@@ -80,13 +80,11 @@ input[type="tel"],
 input[type="color"],
 .uneditable-input {
   display: inline-block;
-  height: $baseLineHeight;
-  padding: 4px 6px;
-  margin-bottom: 0;
+  padding: 8px 8px;
+  margin-bottom: 10px;
   font-size: $baseFontSize;
   line-height: $baseLineHeight;
   color: $gray;
-  @include border-radius($inputBorderRadius);
   vertical-align: middle;
 }
 
@@ -121,7 +119,7 @@ input[type="color"],
   background-color: $inputBackground;
   @include transition(border linear .2s, box-shadow linear .2s);
   width: 100%;
-  border-radius: 0;
+  border-radius: $baseBorderRadius;
   border: none;
 
   // Focus state

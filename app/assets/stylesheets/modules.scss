@@ -5,20 +5,12 @@
   display: hidden;
 }
 
-.m-input {
-  margin-bottom: 10px;
-}
-
 .m-input-button {
   .btn {
     width: 100%;
-    padding: 34px 0;
+    padding: 40px 0;
     margin-top: 0;
   }
-}
-
-.input-tags {
-
 }
 
 .m-tags {
@@ -61,4 +53,11 @@
   background-color: $green;
   @include linear-gradient($green, lighten($green, 6%));
   padding: $module-margin *5 0 $module-margin *3 0;
+  a {
+    color: transparentize($white, .4);
+    text-decoration: none;
+    &:hover {
+      color: $white;
+    }
+  }
 }

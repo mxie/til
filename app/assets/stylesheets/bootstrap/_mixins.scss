@@ -244,7 +244,7 @@
 }
 
 // Drop shadows
-@mixin box-shadow($shadow...) { 
+@mixin box-shadow($shadow...) {
   -webkit-box-shadow: $shadow;
      -moz-box-shadow: $shadow;
           box-shadow: $shadow;
@@ -489,7 +489,7 @@
 @mixin buttonBackground($startColor, $endColor, $textColor: #fff, $textShadow: 0 -1px 0 rgba(0,0,0,.25)) {
   // gradientBar will set the background to a pleasing blend of these, to support IE<=9
   @include gradientBar($startColor, $endColor, $textColor, $textShadow);
-  *background-color: $endColor; /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  // *background-color: $endColor; /* Darken IE7 buttons by default so they stand out more given they won't have borders */
   @include reset-filter();
 
   // in these cases the gradient won't cover the background, so we override
