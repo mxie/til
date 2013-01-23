@@ -5,6 +5,6 @@ feature 'Visitor clicks the logo' do
     visit sign_up_path
     click_link 'Today I Learned'
 
-    page.should have_content 'Welcome!'
+    user_should_be_signed_out
   end
 end

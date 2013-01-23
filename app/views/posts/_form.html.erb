@@ -1,7 +1,7 @@
 <%= simple_form_for @post do |f| %>
   <div class="l-input">
       <%= f.input :lesson, as: :text, input_html: { rows: 2 }, placeholder: 'Lesson', label: false %>
-      <%= f.input :tag_list, as: :text, input_html: { rows: 1 }, placeholder: 'Tags. Separate tags with a comma.', label: false  %>
+      <%= f.input :tag_list, as: :text, input_html: { rows: 1 }, placeholder: 'Tags', label: false  %>
   </div>
 
   <div class="l-input-button">
