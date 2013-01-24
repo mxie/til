@@ -10,13 +10,13 @@ feature 'Visitor signs up' do
   scenario 'tries with invalid email' do
     sign_up_with '', 'invalid_email', 'password'
 
-    page.should have_content I18n.t('sessions.new.sign_up')
+    user_should_be_signed_out
   end
 
   scenario 'tries with blank password' do
     sign_up_with '', 'valid@example.com', ''
 
-    page.should have_content I18n.t('sessions.new.sign_up')
+    user_should_be_signed_out
   end
 
   scenario 'and sees a different landing page' do
