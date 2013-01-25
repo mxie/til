@@ -8,14 +8,14 @@ feature 'User writes post' do
   scenario 'with invalid input' do
     click_button 'Create Post'
 
-    page.should have_css('.error')
+    page.should have_css('.field_with_errors')
   end
 
   scenario 'with valid input' do
     fill_in lesson_label, with: 'A lesson'
     click_button 'Create Post'
 
-    page.should_not have_css('.error')
+    page.should_not have_css('.field_with_errors')
   end
 
   scenario 'and sees the post they just wrote' do
