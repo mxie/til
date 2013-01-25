@@ -1,15 +1,13 @@
-<div class="m-my-area">
-  <div class="container">
-    <section>
-      <div class="welcome">Today I learned!</div>
-    </section>
+<% content_for :my_area do %>
+  <section>
+    <div class="welcome">Today I learned!</div>
+  </section>
 
-    <aside>
-      <h2>Sign up</h2>
-      <%= render 'users/form' %>
-      <ul>
-        <li><%= link_to t('sessions.new.title'), sign_in_path %></li>
-      </ul>
-    </aside>
-  </div>
-</div>
+  <aside>
+    <h2>Sign up</h2>
+    <%= render 'users/form' %>
+    <ul>
+      <li><%= link_to t('sessions.new.title'), sign_in_path %></li>
+    </ul>
+  </aside>
+<% end %>

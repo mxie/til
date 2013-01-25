@@ -1,13 +1,11 @@
-<div class="m-my-area">
-  <div class="container">
-    <%= render 'form' %>
-    <div class="l-landing-stats">
-      <label for="">Statistics</label>
-      <div class="m-stats">
-      </div>
+<% content_for :my_area do %>
+  <%= render 'form' %>
+  <div class="l-landing-stats">
+    <label for="">Statistics</label>
+    <div class="m-stats">
     </div>
   </div>
-</div>
+<% end %>
 
 <div class="tab-section">
   <div class="container">
