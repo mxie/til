@@ -1,7 +1,7 @@
 //
 // Layouts
 // --------------------------------------------------
-
+$mobile: new-breakpoint(max-width 540px);
 
 body {
   background-color: $white;
@@ -11,6 +11,7 @@ body {
 .container {
   @include container-fixed();
   @include outer-container;
+  padding: 0 12px;
 }
 
 header {
@@ -27,23 +28,43 @@ header {
 aside {
   @include span-columns(4);
   @include omega();
+  @include media($mobile) {
+    @include span-columns(12);
+    float: none;
+  }
 }
 
 section {
   @include span-columns(8);
+  @include media($mobile) {
+    @include span-columns(12);
+    float: none;
+  }
 }
 
 .l-input {
   @include span-columns(8);
+  @include media($mobile) {
+    @include span-columns(12);
+    float: none;
+  }
 }
 
 .l-input-tags {
   @include span-columns(4);
   @include omega();
+  @include media($mobile) {
+    @include span-columns(12);
+    float: none;
+  }
 }
 
 .l-input-button {
   @include span-columns(4);
+  @include media($mobile) {
+    @include span-columns(12);
+    float: none;
+  }
 }
 
 .l-landing-stats {

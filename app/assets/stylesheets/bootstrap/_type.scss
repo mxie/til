@@ -30,6 +30,12 @@ a, a:link {
   margin-bottom: 22px;
 }
 
+@media screen and (max-device-width: 800px), screen and (max-width: 800px) {
+  .welcome {
+    font-size: 80px;
+  }
+}
+
 // Emphasis & misc
 // -------------------------
 

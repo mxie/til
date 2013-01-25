@@ -10,7 +10,8 @@
 }
 .dropdown-toggle {
   // The caret makes the toggle a bit too tall in IE7
-  *margin-bottom: -3px;
+  // *margin-bottom: -3px;
+  @include navtext;
 }
 .dropdown-toggle:active,
 .open .dropdown-toggle {
@@ -32,16 +33,16 @@
 
 // Place the caret
 .dropdown .caret {
-  margin-top: 8px;
-  margin-left: 2px;
+  // margin-top: 8px;
+  margin-left: 22px;
 }
 
 // The dropdown menu (ul)
 // ----------------------
 .dropdown-menu {
   position: absolute;
-  top: 100%;
-  left: 0;
+  top: 107%;
+  right: 0;
   z-index: $zindexDropdown;
   display: none; // none by default, but block on "open" of the menu
   float: left;
@@ -49,18 +50,12 @@
   padding: 5px 5px;
   margin: 2px 0 0; // override default ul
   list-style: none;
-  background-color: $dropdownBackground;
-  border: 1px solid #ccc; // Fallback for IE7-8
-  border: 1px solid $dropdownBorder;
-  *border-right-width: 2px;
-  *border-bottom-width: 2px;
-  @include border-radius(6px);
-  @include box-shadow(0 5px 10px rgba(0,0,0,.2));
+  background-color: $black;
+  // @include border-radius(6px);
+  // @include box-shadow(0 5px 10px rgba(0,0,0,.2));
   -webkit-background-clip: padding-box;
      -moz-background-clip: padding;
           background-clip: padding-box;
-
-  // Aligns the dropdown menu to right
   &.pull-right {
     right: 0;
     left: auto;
@@ -70,16 +65,28 @@
   .divider {
     @include nav-divider($dropdownDividerTop, $dropdownDividerBottom);
   }
-
   // Links within the dropdown menu
   li > a {
     display: block;
     padding: 3px 20px;
     clear: both;
     font-weight: normal;
+    font-size: 11px;
+    text-decoration: none;
+    text-align: right;
+    text-transform: uppercase;
     line-height: $baseLineHeight;
-    color: $dropdownLinkColor;
+    color: $grayLight;
     white-space: nowrap;
+  }
+}
+
+.dropdown-phone {
+  top: 90%;
+  width: 100%;
+  li > a {
+    margin-bottom: 12px;
+    text-align: center;
   }
 }
 
@@ -90,26 +97,19 @@
 .dropdown-submenu:hover > a {
   text-decoration: none;
   color: $dropdownLinkColorHover;
-  @include gradient-vertical($dropdownLinkBackgroundHover, darken($dropdownLinkBackgroundHover, 5%));
+  // @include gradient-vertical($dropdownLinkBackgroundHover, darken($dropdownLinkBackgroundHover, 5%));
 }
 
 // Active state
 // ------------
 .dropdown-menu .active > a,
 .dropdown-menu .active > a:hover {
-  color: $dropdownLinkColorActive;
+  color: $grayLight;
   text-decoration: none;
   outline: 0;
-  @include gradient-vertical($dropdownLinkBackgroundActive, darken($dropdownLinkBackgroundActive, 5%));
+  // @include gradient-vertical($dropdownLinkBackgroundActive, darken($dropdownLinkBackgroundActive, 5%));
 }
 
-// Disabled state
-// --------------
-// Gray out text and ensure the hover state remains gray
-.dropdown-menu .disabled > a,
-.dropdown-menu .disabled > a:hover {
-  color: $grayLight;
-}
 // Nuke hover effects
 .dropdown-menu .disabled > a:hover {
   text-decoration: none;

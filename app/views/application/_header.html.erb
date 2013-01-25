@@ -9,8 +9,30 @@
             <%= nav_tab(controller: 'users', text: 'People') %>
             <%= nav_tab(controller: 'tags', text: 'Tags') %>
           </ul>
+
+          <div class="btn-group visible-phone pull-right">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-phone">
+              <li class="active"><%= link_to 'Home', root_path %></li>
+              <li><%= link_to 'People', users_path %></li>
+              <li><a href="#">Tags</a></li>
+              <li><%= link_to "Account settings", sign_out_path, method: :delete %></li>
+              <li><%= link_to "Sign out", sign_out_path, method: :delete %></li>
+            </ul>
+          </div>
+
           <ul class="nav pull-right">
-            <li><%= link_to "Sign out", sign_out_path, method: :delete %></li>
+            <li>
+              <div class="btn-group">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">User's Name<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><%= link_to "Account settings", sign_out_path, method: :delete %></li>
+                  <li><%= link_to "Sign out", sign_out_path, method: :delete %></li>
+                </ul>
+              </div>
+            </li>
           </ul>
         <% end -%>
         <div class="clearfix"></div>

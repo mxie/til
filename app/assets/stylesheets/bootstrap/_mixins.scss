@@ -24,6 +24,20 @@
   }
 }
 
+@mixin navtext {
+  padding: 3px 15px;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: $baseLineHeight;
+  color: $grayLight !important;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  padding: (($navbarHeight - $baseLineHeight) / 2) 15px (($navbarHeight - $baseLineHeight) / 2);
+  &:hover {
+    color: $white !important;
+  }
+}
+
 // Webkit-style focus
 // ------------------
 @mixin tab-focus() {
@@ -586,7 +600,7 @@
 }
 
 @mixin grid-core-span($columns, $gridColumnWidth, $gridGutterWidth) {
-  width: ($gridColumnWidth * $columns) + ($gridGutterWidth * ($columns - 1));
+  max-width: ($gridColumnWidth * $columns) + ($gridGutterWidth * ($columns - 1));
 }
 
 @mixin grid-core-offset($columns, $gridColumnWidth, $gridGutterWidth) {
