@@ -5,8 +5,21 @@ feature 'User writes post' do
     signed_in_user
   end
 
+  scenario 'with invalid input' do
+    click_button 'Create Post'
+
+    page.should have_css('.field_with_errors')
+  end
+
+  scenario 'with valid input' do
+    fill_in lesson_label, with: 'A lesson'
+    click_button 'Create Post'
+
+    page.should_not have_css('.field_with_errors')
+  end
+
   scenario 'and sees the post they just wrote' do
-    fill_in 'Lesson', with: 'Cool things'
+    fill_in lesson_label, with: 'Cool things'
     click_button 'Create Post'
 
     page.should have_content('Cool things')
@@ -14,8 +27,8 @@ feature 'User writes post' do
   end
 
   scenario 'and sees the post they just wrote with a tag' do
-    fill_in 'Lesson', with: 'Cool things'
-    fill_in 'Tags', with: 'vague'
+    fill_in lesson_label, with: 'Cool things'
+    fill_in tags_label, with: 'vague'
     click_button 'Create Post'
 
     page.should have_content('Cool things')
@@ -23,8 +36,8 @@ feature 'User writes post' do
   end
 
   scenario 'and sees the post they just wrote with multiple tags' do
-    fill_in 'Lesson', with: 'Cool things'
-    fill_in 'Tags', with: 'vague, random'
+    fill_in lesson_label, with: 'Cool things'
+    fill_in tags_label, with: 'vague, random'
     click_button 'Create Post'
 
     page.should have_content('Cool things')
@@ -38,7 +51,7 @@ feature 'User writes post' do
 
     Timecop.freeze(old_time)
 
-    fill_in 'Lesson', with: 'Cool things'
+    fill_in lesson_label, with: 'Cool things'
     click_button 'Create Post'
 
     Timecop.return
@@ -47,5 +60,13 @@ feature 'User writes post' do
     visit root_path
 
     page.should have_content('2 minutes ago')
+  end
+
+  def lesson_label
+    I18n.t('simple_form.placeholders.lesson')
+  end
+
+  def tags_label
+    I18n.t('simple_form.placeholders.tags')
   end
 end
