@@ -57,7 +57,9 @@ section {
   @extend .shake;
 
   textarea {
-    border: 1px solid red;
+    @include box-sizing(border-box);
+    border: 1px solid $green;
+    box-shadow: 0 0 10px yellow;
   }
 }
 
