@@ -2,7 +2,7 @@ Til::Application.routes.draw do
   root :to => 'homes#index'
 
   resources :posts
-  resource :session, controller: 'sessions'
+  resource :session, controller: 'sessions', only: [:create, :new, :destroy]
   resources :users, controller: 'users'
 
   match 'sign_in' => 'homes#index', as: 'sign_in'

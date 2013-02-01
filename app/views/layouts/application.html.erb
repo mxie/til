@@ -11,8 +11,16 @@
   </head>
   <body class="<%= body_class %>">
     <%= render 'shared/header' -%>
-    <%= render 'flashes' -%>
+
+    <div class="m-my-area">
+      <div class="container">
+        <%= render 'flashes' -%>
+        <%= yield :my_area %>
+      </div>
+    </div>
+
     <%= yield %>
+
     <%= render 'javascript' %>
   </body>
 </html>
