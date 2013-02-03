@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe User do
+  it { should have_many(:posts) }
+
   describe '#display_name' do
     it 'returns the name of the user if it is available' do
       user = build(:user, name: 'Some Name', email: 'user@example.com')
