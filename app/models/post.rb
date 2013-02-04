@@ -5,4 +5,6 @@ class Post < ActiveRecord::Base
   validates :user_id, presence: true
 
   belongs_to :user
+
+  default_scope order: 'posts.created_at DESC'
 end

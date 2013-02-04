@@ -12,6 +12,11 @@
     <ul>
       <%= render @posts %>
     </ul>
+
+    <div class="pagination-info">
+      <%= page_entries_info @posts, model: 'lesson' %>
+      <%= will_paginate %>
+    </div>
   </section>
 
   <aside>

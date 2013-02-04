@@ -11,4 +11,16 @@ feature 'User views posts page' do
       page.should have_content(post.user.display_name)
     end
   end
+
+  scenario 'and the posts are paginated' do
+    signed_in_user
+    create_list(:post, PostsController::DEFAULT_PER_PAGE + 1)
+    expected_post = Post.first
+    unexpected_post = Post.last
+
+    visit posts_path
+
+    page.should have_selector('li', text: expected_post.lesson)
+    page.should_not have_selector('li', text: unexpected_post.lesson)
+  end
 end
