@@ -13,7 +13,9 @@
             <li><%= link_to "Sign out", sign_out_path, method: :delete %></li>
           </ul>
         <% end -%>
+        <div class="clearfix"></div>
       </div>
+      <%= render 'flashes' -%>
     </div>
   </div>
 </header>

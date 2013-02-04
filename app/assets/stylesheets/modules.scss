@@ -61,3 +61,14 @@
     }
   }
 }
+
+#flash_notice {
+  border-radius: 0;
+  color: darken($yellow, 11%);
+  border: none;
+  background-color: darken($black, 2%);
+  margin-bottom: 0;
+  a {
+    color: $yellow;
+  }
+}
