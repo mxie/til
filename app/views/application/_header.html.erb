@@ -5,39 +5,37 @@
         <%= link_to 'Today I Learned', root_path, class: 'brand' %>
         <% if signed_in? -%>
           <ul class="nav">
-            <%= nav_tab(controller: 'posts', text: 'Home', path: root_path) %>
-            <%= nav_tab(controller: 'users', text: 'People') %>
-            <%= nav_tab(controller: 'tags', text: 'Tags') %>
+            <%= render 'navigation_tabs' %>
           </ul>
-
-          <div class="btn-group visible-phone pull-right">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu<span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu dropdown-phone">
-              <li class="active"><%= link_to 'Home', root_path %></li>
-              <li><%= link_to 'People', users_path %></li>
-              <li><a href="#">Tags</a></li>
-              <li><%= link_to "Account settings", sign_out_path, method: :delete %></li>
-              <li><%= link_to "Sign out", sign_out_path, method: :delete %></li>
-            </ul>
-          </div>
 
           <ul class="nav pull-right">
             <li>
               <div class="btn-group">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">User's Name<span class="caret"></span>
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  <%= current_user.display_name %><span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                  <li><%= link_to "Account settings", sign_out_path, method: :delete %></li>
-                  <li><%= link_to "Sign out", sign_out_path, method: :delete %></li>
+                  <%= render 'user_menu' %>
                 </ul>
               </div>
             </li>
           </ul>
+
+          <div class="btn-group visible-phone pull-right">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              Menu<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-phone">
+              <%= render 'navigation_tabs' %>
+              <%= render 'user_menu' %>
+            </ul>
+          </div>
         <% end -%>
         <div class="clearfix"></div>
       </div>
+
       <%= render 'flashes' -%>
+
     </div>
   </div>
 </header>
