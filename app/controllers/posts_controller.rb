@@ -2,12 +2,12 @@ class PostsController < ApplicationController
   before_filter :authorize, only: [:index, :create]
 
   def index
-    @post = Post.new
+    @post = current_user.posts.build
     @posts = Post.all
   end
 
   def create
-    @post = Post.new(params[:post])
+    @post = current_user.posts.build(params[:post])
     if @post.save
       redirect_to root_path
     else

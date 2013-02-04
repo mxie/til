@@ -11,6 +11,7 @@ FactoryGirl.define do
 
   factory :post do
     lesson 'A lesson'
+    user
   end
 
 end

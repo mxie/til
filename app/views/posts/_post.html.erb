@@ -2,7 +2,7 @@
   <div class="learning">
     <div class="avatar"></div>
     <div class="learning-content">
-      <h4 class="inline">Person's Name</h4>
+      <h4 class="inline"><%= post.user.display_name %></h4>
       <h6 class="inline"><%= time_ago_in_words(post.created_at) %> ago</h6>
       <p><%= post.lesson %></p>
       <% post.tags.each do |tag| %>
