@@ -5,9 +5,9 @@
         <%= link_to 'Today I Learned', root_path, class: 'brand' %>
         <% if signed_in? -%>
           <ul class="nav">
-            <li class="active"><%= link_to 'Home', root_path %></li>
-            <li><%= link_to 'People', users_path %></li>
-            <li><%= link_to 'Tags', tags_path %></li>
+            <%= nav_tab(controller: 'posts', text: 'Home', path: root_path) %>
+            <%= nav_tab(controller: 'users', text: 'People') %>
+            <%= nav_tab(controller: 'tags', text: 'Tags') %>
           </ul>
           <ul class="nav pull-right">
             <li><%= link_to "Sign out", sign_out_path, method: :delete %></li>
