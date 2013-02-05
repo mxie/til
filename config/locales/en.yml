@@ -3,9 +3,43 @@ en:
     formats:
       default: '%m/%d/%Y'
       with_weekday: '%a %m/%d/%y'
-
   time:
     formats:
       default: '%a, %b %-d, %Y at %r'
       date: '%b %-d, %Y'
       short: '%B %d'
+  navigation:
+    posts: 'Home'
+    users: 'Learners'
+    tags: 'Tags'
+    settings: 'Settings'
+  personal:
+    posts: 
+      default: 'Personal Lessons'
+      short: 'Personal'
+    users:
+      default: 'Learners I Follow'
+      short: 'Following'
+    tags:
+      default: 'In Personal Lessons'
+      short: 'Personal'
+  followed:
+    posts:
+      default: 'Followed Lessons'
+      short: 'Followed'
+    users:
+      default: 'Followers'
+      short: 'Followers'
+    tags:
+      default: 'In Followed Lessons'
+      short: 'Followed'
+  general:
+    posts:
+      default: 'All Lessons'
+      short: 'All'
+    users:
+      default: 'All Learners'
+      short: 'All'
+    tags:
+      default: 'In All Lessons'
+      short: 'All'

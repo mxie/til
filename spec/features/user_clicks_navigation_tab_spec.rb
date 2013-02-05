@@ -6,12 +6,12 @@ feature 'User clicks on a navigation tab' do
   end
 
   scenario 'and the the appropriate tab is active depending on the page' do
-    click_link 'Home'
+    click_link I18n.t('navigation.posts')
 
-    page.should have_selector('li.active', text: 'Home')
+    page.should have_selector('li.active', text: I18n.t('navigation.posts'))
 
-    click_link 'People'
+    click_link I18n.t('navigation.users')
 
-    page.should have_selector('li.active', text: 'People')
+    page.should have_selector('li.active', text: I18n.t('navigation.users'))
   end
 end
