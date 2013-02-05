@@ -1,0 +1,15 @@
+<ul class="nav">
+  <%= render 'navigation_tabs' %>
+</ul>
+<ul class="nav pull-right">
+  <li>
+  <div class="btn-group">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+      <%= current_user.display_name %><span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <%= render 'user_menu' %>
+    </ul>
+  </div>
+  </li>
+</ul>

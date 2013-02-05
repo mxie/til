@@ -14,4 +14,8 @@ module ApplicationHelper
 
     content_tag(:li, link_to(text, path), class: tab_class(page_controller))
   end
+
+  def mobile_device?
+    request.user_agent =~ /Mobile|webOS/
+  end
 end
