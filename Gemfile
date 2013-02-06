@@ -15,6 +15,7 @@ gem 'bourbon'
 gem 'neat'
 gem 'airbrake'
 gem 'acts-as-taggable-on', '~> 2.3.3'
+gem 'will_paginate', '~> 3.0'
 
 group :development do
   gem 'foreman'

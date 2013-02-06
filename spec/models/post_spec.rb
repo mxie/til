@@ -65,4 +65,13 @@ describe Post do
       Post.tag_counts.find_by_name(tag).count
     end
   end
+
+  context 'when there are multiple posts' do
+    it 'should all be listed in reverse chronological order' do
+      older_post = create(:post, created_at: Date.yesterday)
+      newer_post = create(:post, created_at: Date.today)
+
+      expect(Post.all).to eq([newer_post, older_post])
+    end
+  end
 end
