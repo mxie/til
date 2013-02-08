@@ -1,0 +1,8 @@
+<% if @cloud_tags.present? %>
+  <div class="m-tags">
+    <h3>Popular Tags</h3>
+    <% tag_cloud(@cloud_tags, %w(badge)) do |tag, css_class| %>
+      <%= link_to tag.name, tag_path(tag.name), id: tag, class: css_class %>
+    <% end %>
+  </div>
+<% end %>

@@ -14,7 +14,7 @@ feature 'User views posts page' do
 
   scenario 'and the posts are paginated' do
     signed_in_user
-    create_list(:post, PostsController::DEFAULT_PER_PAGE + 1)
+    create_list(:post, Post::DEFAULT_PER_PAGE + 1)
     expected_post = Post.first
     unexpected_post = Post.last
 

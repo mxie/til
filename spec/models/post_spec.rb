@@ -58,7 +58,7 @@ describe Post do
     end
 
     def tag_object_for(tag)
-      ActsAsTaggableOn::Tag.find_by_name(tag)
+      Tag.find_by_name(tag)
     end
 
     def tag_count_for(tag)

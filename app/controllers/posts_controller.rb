@@ -1,11 +1,10 @@
 class PostsController < ApplicationController
-  DEFAULT_PER_PAGE = 10
-
   before_filter :authorize, only: [:index, :create]
 
   def index
     @post = current_user.posts.build
     @posts = paginated_posts
+    @cloud_tags = Post.tag_counts
   end
 
   def create
@@ -21,6 +20,6 @@ class PostsController < ApplicationController
   private
 
   def paginated_posts
-    Post.paginate(page: params[:page], per_page: DEFAULT_PER_PAGE)
+    Post.paginate(page: params[:page])
   end
 end

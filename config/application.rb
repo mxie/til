@@ -73,5 +73,8 @@ module Til
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # ActsAsTaggableOn configs
+    ActsAsTaggableOn.force_lowercase = true
   end
 end
