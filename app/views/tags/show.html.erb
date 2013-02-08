@@ -1,0 +1,11 @@
+<% content_for :top_container do %>
+  All posts tagged with "<%= @tag %>"
+<% end %>
+
+<div class="container">
+  <section>
+    <ul>
+      <%= render @posts %>
+    </ul>
+  </section>
+</div>

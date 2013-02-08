@@ -8,6 +8,10 @@ FactoryGirl.define do
     "lesson ##{n}"
   end
 
+  sequence :tag_list do |n|
+    "tag #{n}"
+  end
+
   factory :user do
     email
     password "password"
@@ -16,6 +20,10 @@ FactoryGirl.define do
   factory :post do
     lesson
     user
+
+    factory :tagged_post do
+      tag_list
+    end
   end
 
 end
