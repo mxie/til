@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   def index
     @post = current_user.posts.build
     @posts = paginated_posts
+    @cloud_tags = Post.tag_counts
   end
 
   def create
