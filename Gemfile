@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '1.9.3'
 
-gem 'rails', '3.2.11'
+gem 'rails', '3.2.12'
 gem 'pg'
 gem 'jquery-rails'
 gem 'clearance', github: 'thoughtbot/clearance', tag: 'v1.0.0.rc4'
