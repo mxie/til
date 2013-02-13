@@ -6,10 +6,7 @@
   </section>
 
   <aside>
-    <div class="avatar"></div>
-    <div>
-      <h4 class="inline"><%= @user.display_name %></h4>
-      <h6>Joined <%= time_ago_in_words(@user.created_at) %> ago</h6>
-    </div>
+    <%= link_avatar_and_username(@user) %>
+    <h6>Joined <%= time_ago_in_words(@user.created_at) %> ago</h6>
   </aside>
 </div>

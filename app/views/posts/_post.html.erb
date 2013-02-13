@@ -1,6 +1,6 @@
 <li>
   <div class="learning">
-    <div class="avatar"></div>
+    <div class="avatar"><%= link_to gravatar_for(post.user), post.user %></div>
     <div class="learning-content">
       <div class="header">
         <h4 class="inline"><%= post.user.display_name %></h4>

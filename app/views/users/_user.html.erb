@@ -1,5 +1,7 @@
 <tr>
-  <td class="user-column"><%= link_to user.display_name, user %></td>
+  <td class="user-column">
+    <%= link_avatar_and_username(user) %>
+  </td>
   <td>
     <a class="tag">This is a tag</a>
     <a class="tag">Tag</a>
