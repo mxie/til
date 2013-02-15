@@ -17,8 +17,17 @@ p {
   line-height: $baseLineHeight * 1.5;
 }
 
-a, a:link {
+a, a:link, a:visited {
   text-decoration: none;
+  @include font-serif;
+  font-weight: 700;
+  font-size: $baseFontSize /1.2;
+  text-transform: uppercase;
+  color: $grayLight;
+  cursor: pointer;
+  &:hover {
+    color: $green;
+  }
 }
 
 .welcome {

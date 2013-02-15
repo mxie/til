@@ -46,6 +46,14 @@
 
 .learning-content {
   margin-left: $baseLineHeight *3;
+  .header {
+    margin-bottom: 8px;
+  }
+  p {
+    border-bottom: 1px solid lighten($grayLight, 14%);
+    padding-bottom: 12px;
+    margin-bottom: 5px;
+  }
 }
 
 .m-my-area {
@@ -74,6 +82,17 @@
 }
 
 .pagination-info {
-  text-align: center;
+  text-align: left;
   line-height: $baseLineHeight;
+  color: $gray;
+  margin-top: 45px;
+  margin-bottom: 30px;
+}
+
+a.tag {
+  margin-right: 10px;
+
+  &:hover {
+    color: $green;
+  }
 }

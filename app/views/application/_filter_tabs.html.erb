@@ -1,13 +1,10 @@
-<% if mobile_device? %>
   <ul class="nav nav-tabs visible-phone">
     <li class="active"><%= link_to t("personal.#{controller_name}.short"), '#' %></li>
     <li><%= link_to t("followed.#{controller_name}.short"), '#' %></li>
     <li><%= link_to t("general.#{controller_name}.short"), '#' %></li>
   </ul>
-<% else %>
   <ul class="nav nav-tabs hidden-phone">
     <li class="active"><%= link_to t("personal.#{controller_name}.default"), '#' %></li>
     <li><%= link_to t("followed.#{controller_name}.default"), '#' %></li>
     <li><%= link_to t("general.#{controller_name}.default"), '#' %></li>
   </ul>
-<% end %>

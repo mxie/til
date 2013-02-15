@@ -1,7 +1,7 @@
 <% content_for :top_container do %>
   <%= render 'form' %>
   <div class="l-landing-stats">
-    <label for="">Statistics</label>
+    <label for=""><p>Statistics</p></label>
     <div class="m-stats">
     </div>
   </div>
@@ -14,8 +14,8 @@
     </ul>
 
     <div class="pagination-info">
-      <%= page_entries_info @posts, model: 'lesson' %>
-      <%= will_paginate %>
+      <p><%= page_entries_info @posts, model: 'lesson' %>
+      <%= will_paginate %></p>
     </div>
   </section>
 
