@@ -107,7 +107,6 @@
 .tab-section {
   background-color: $grayLighter;
   height: 48px;                                   // HACK!
-  margin-bottom: $baseLineHeight * 2;
   box-shadow: 0 -1px 2px darken($green, 1%);
 }
 

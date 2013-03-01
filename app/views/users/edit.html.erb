@@ -1,12 +1,18 @@
+<% content_for :top_container do %>
+  <div class="m-my-area-empty"></div>
+<% end %>
+
 <% content_for :my_area do %>
   <%= t 'settings.description' %>
 <% end %>
 
 <div class="container">
-  <%= simple_form_for current_user, defaults: { label: false } do |f| %>
-    <%= f.input :name, placeholder: t('settings.name'), hint: t('simple_form.hints.name') %>
-    <%= f.input :email, placeholder: t('settings.email'), hint: t('simple_form.hints.email') %>
-    <%= f.input :password, placeholder: t('settings.password') %>
-    <%= f.button :submit, t('settings.submit'), class: 'btn' %>
+  <%= simple_form_for current_user, defaults: { wrapper_html: { class: 'setting-form' } } do |f| %>
+    <%= f.input :name, hint: t('simple_form.hints.name') %>
+    <%= f.input :email, hint: t('simple_form.hints.email') %>
+    <%= f.input :password %>
+    <div class="submit">
+      <%= f.button :submit, t('settings.submit'), class: 'main-button' %>
+    </div>
   <% end %>
 </div>

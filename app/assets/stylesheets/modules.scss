@@ -41,7 +41,7 @@
 
 .learning {
   height: 100%;
-  margin-bottom: $module-margin;
+  margin-bottom: $module-margin *2;
 }
 
 .learning-content {
@@ -60,7 +60,7 @@
   width: 100%;
   background-color: $green;
   @include linear-gradient($green, lighten($green, 6%));
-  padding: $module-margin *5 0 $module-margin *3 0;
+  padding: $module-margin *2 0 $module-margin *3 0;
   a {
     color: transparentize($white, .4);
     text-decoration: none;
@@ -70,7 +70,21 @@
   }
 }
 
-#flash_notice {
+.m-my-area-empty {
+  width: 100%;
+  background-color: $green;
+  padding: $module-margin 0 $module-margin *1.8 0;
+  a {
+    color: transparentize($white, .4);
+    text-decoration: none;
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+#flash_notice,
+#flash_success {
   border-radius: 0;
   color: darken($yellow, 11%);
   border: none;

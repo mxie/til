@@ -22,7 +22,7 @@ $grayLighter:           darken($white, 10%);
 // -------------------------
 $blue:                  #91C3CA !default;
 $blueDark:              #0064cd !default;
-$green:                 #46a546 !default;
+$green:                 desaturate(#46a546, 10);
 $black:                 darken($green, 34%);
 $red:                   #9d261d !default;
 $yellow:                #FFEBAD !default;

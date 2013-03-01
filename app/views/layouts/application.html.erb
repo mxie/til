@@ -13,15 +13,13 @@
   <body class="<%= body_class %>">
     <%= render 'header' -%>
 
-    <div class="m-my-area">
-      <div class="container">
-        <%= yield :top_container %>
-      </div>
-    </div>
+    <%= yield :top_container %>
 
     <%= yield :filter_tabs %>
 
-    <%= yield %>
+    <div class="wrapper">
+      <%= yield %>
+    </div>
 
     <%= render 'javascript' %>
   </body>

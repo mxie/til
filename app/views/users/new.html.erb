@@ -1,13 +1,17 @@
 <% content_for :top_container do %>
-  <section>
-    <div class="welcome">Today I learned!</div>
-  </section>
+  <div class="m-my-area">
+    <div class="container">
+      <section>
+        <div class="welcome">Today I learned!</div>
+      </section>
 
-  <aside>
-    <h2>Sign up</h2>
-    <%= render 'users/form' %>
-    <ul>
-      <li><%= link_to t('sessions.new.title'), sign_in_path %></li>
-    </ul>
-  </aside>
+      <aside>
+        <h2>Sign up</h2>
+        <%= render 'users/form' %>
+        <ul>
+          <li><%= link_to t('sessions.new.title'), sign_in_path %></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
 <% end %>
