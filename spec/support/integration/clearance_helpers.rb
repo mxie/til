@@ -30,7 +30,9 @@ module Integration
     end
 
     def sign_out
-      click_link I18n.t('layouts.application.sign_out')
+      within('.nav .dropdown-menu') do
+        click_link I18n.t('layouts.application.sign_out')
+      end
     end
 
     def user_should_be_signed_out

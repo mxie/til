@@ -6,12 +6,28 @@ feature 'User clicks on a navigation tab' do
   end
 
   scenario 'and the the appropriate tab is active depending on the page' do
-    click_link I18n.t('navigation.posts')
+    posts_link.click
 
-    page.should have_selector('li.active', text: I18n.t('navigation.posts'))
+    verify_link_is_active(posts_link)
 
-    click_link I18n.t('navigation.users')
+    users_link.click
 
-    page.should have_selector('li.active', text: I18n.t('navigation.users'))
+    verify_link_is_active(users_link)
+  end
+
+  def nav_link(link_text)
+    all('a', text: link_text).first
+  end
+
+  def posts_link
+    nav_link(I18n.t('navigation.posts'))
+  end
+
+  def users_link
+    nav_link(I18n.t('navigation.users'))
+  end
+
+  def verify_link_is_active(link)
+    link.parent.has_css?('li.active')
   end
 end
