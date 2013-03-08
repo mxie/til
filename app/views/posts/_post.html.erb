@@ -5,6 +5,9 @@
       <div class="header">
         <h4 class="inline"><%= post.user.display_name %></h4>
         <h6 class="inline"><%= time_ago_in_words(post.created_at) %> ago</h6>
+        <% if current_user == post.user %>
+          <%= link_to t('posts.destroy.link'), post_path(post), method: :delete %>
+        <% end %>
       </div>
       <p><%= post.lesson %></p>
       <% post.tags.each do |tag| %>

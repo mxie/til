@@ -13,6 +13,10 @@ en:
     users: 'Learners'
     tags: 'Tags'
     settings: 'Settings'
+  posts:
+    destroy:
+      link: 'Delete'
+      success: "Post successfully deleted"
   personal:
     posts: 
       default: 'Personal Lessons'

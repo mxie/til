@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_filter :authorize, only: [:index, :create]
+  before_filter :authorize
 
   def index
     @post = current_user.posts.build
@@ -15,6 +15,17 @@ class PostsController < ApplicationController
       @posts = paginated_posts
       render 'index'
     end
+  end
+
+  def destroy
+    post = current_user.posts.find_by_id(params[:id])
+
+    if post
+      post.destroy
+      flash[:notice] = t('posts.destroy.success')
+    end
+
+    redirect_to posts_path
   end
 
   private

@@ -32,4 +32,19 @@ describe PostsController do
       should deny_access(flash: I18n.t('flashes.failure_when_unauthorized'))
     end
   end
+
+  describe 'destroy' do
+    context 'when given a post that does not belong to the current user' do
+      it 'does not delete the post' do
+        user = create(:user)
+        other_user = create(:user)
+        sign_in_as(user)
+        post = create(:post, user: other_user)
+
+        delete :destroy, id: post.id
+
+        Post.find(post.id).should eq post
+      end
+    end
+  end
 end
