@@ -10,3 +10,6 @@ en:
     placeholders:
       lesson: 'Lesson'
       tags: 'Tags, comma-separated'
+    hints:
+      name: 'This is displayed to the public.'
+      email: 'This will be used in place of your name if it was not set.'

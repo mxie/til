@@ -1,0 +1,12 @@
+<% content_for :my_area do %>
+  <%= t 'settings.description' %>
+<% end %>
+
+<div class="container">
+  <%= simple_form_for current_user, defaults: { label: false } do |f| %>
+    <%= f.input :name, placeholder: t('settings.name'), hint: t('simple_form.hints.name') %>
+    <%= f.input :email, placeholder: t('settings.email'), hint: t('simple_form.hints.email') %>
+    <%= f.input :password, placeholder: t('settings.password') %>
+    <%= f.button :submit, t('settings.submit'), class: 'btn' %>
+  <% end %>
+</div>

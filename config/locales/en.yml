@@ -17,6 +17,13 @@ en:
     destroy:
       link: 'Delete'
       success: "Post successfully deleted"
+  settings:
+    description: 'Update your information here'
+    name: 'Name'
+    email: 'Email address'
+    password: 'Password'
+    submit: 'Save my changes'
+    success: 'Your changes have been saved!'
   personal:
     posts: 
       default: 'Personal Lessons'
