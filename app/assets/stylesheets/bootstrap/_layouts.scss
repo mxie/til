@@ -7,6 +7,10 @@ body {
   background-color: $white;
 }
 
+.wrapper {
+  padding-top: 60px;
+}
+
 // Container (centered, fixed-width layouts)
 .container {
   @include container-fixed();
@@ -15,7 +19,7 @@ body {
 }
 
 header {
-  margin-bottom: 20px;
+  margin-bottom: 64px;
 }
 
 // Fluid layouts (left aligned, with sidebar, min- & max-width content)
@@ -84,3 +88,7 @@ section {
   }
 }
 
+.submit {
+  @include span-columns(4);
+  @include shift(8);
+}

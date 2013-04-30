@@ -1,10 +1,14 @@
 <% content_for :top_container do %>
-  <h2><%= t '.title' %></h2>
+  <div class="m-my-area">
+    <div class="container">
+      <h2><%= t '.title' %></h2>
 
-  <p><%= t '.description' %></p>
+      <p><%= t '.description' %></p>
 
-  <%= simple_form_for :password, url: passwords_path do |f| %>
-    <%= f.input :email %>
-    <%= f.button :submit %>
-  <% end %>
+      <%= simple_form_for :password, url: passwords_path , defaults: { label: false }  do |f| %>
+        <%= f.input :email, placeholder: t('settings.email') %>
+        <%= f.button :submit %>
+      <% end %>
+    </div>
+  </div>
 <% end %>

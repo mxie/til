@@ -1,8 +1,20 @@
 <% content_for :top_container do %>
-  <%= render 'form' %>
-  <div class="l-landing-stats">
-    <label for=""><p>Statistics</p></label>
-    <div class="m-stats">
+  <div class="m-my-area">
+    <div class="container">
+      <%= render 'form' %>
+      <div class="l-landing-stats">
+        <label for=""><p>Statistics</p></label>
+        <div class="m-stats">
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<% content_for :filter_tabs do %>
+  <div class="tab-section">
+    <div class="container">
+      <%= render 'filter_tabs' %>
     </div>
   </div>
 <% end %>

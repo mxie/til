@@ -9,6 +9,7 @@
 p {
   margin: 0 0 $baseLineHeight / 2;
   @include font-family-serif;
+  font-size: $baseFontSize;
 }
 .lead {
   margin-bottom: $baseLineHeight;
