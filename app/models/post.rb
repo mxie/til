@@ -10,5 +10,7 @@ class Post < ActiveRecord::Base
 
   default_scope order: 'posts.created_at DESC'
 
+  delegate :display_name, to: :user, prefix: true
+
   self.per_page = DEFAULT_PER_PAGE
 end

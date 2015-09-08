@@ -15,7 +15,7 @@ feature 'User views users page' do
     end
   end
 
-  scenario 'and clicks on a user' do
+  scenario 'and clicks on a user to view their posts' do
     other_user = create(:user)
     posts = create_list(:post, 5, user: other_user)
 
@@ -25,6 +25,16 @@ feature 'User views users page' do
     page.should have_content(other_user.display_name)
     posts.each do |post|
       page.should have_content(post.lesson)
+    end
+  end
+
+  scenario 'and sees a picture associated with each user' do
+    users = create_list(:user, 3)
+
+    visit users_path
+
+    users.each do |user|
+      page.should have_xpath("//img[@alt='#{user.display_name}']")
     end
   end
 end
